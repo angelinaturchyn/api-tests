@@ -35,20 +35,3 @@ describe('Auth',function (){
         })
     })
 })
-
-
-    describe('Log in with invalid credentials',function () {
-
-        before(async function() {
-            await authHelper.login('fake', 'fake')
-        })
-
-        it('Response status code is 404', function () {
-            expect(authHelper.response.statusCode).to.eq(404)
-                })
-
-        it('response body contains error message', function() {
-            expect(authHelper.response.body.message).to.eq('Wrong login or password.')
-        })
-    })
-})
