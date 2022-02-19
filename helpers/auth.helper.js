@@ -1,10 +1,6 @@
 import supertest from 'supertest'
 
 class AuthHelper{
-    // constructor() {
-    //     this.response = null;
-    // }
-
     response
   async login(username, password){
       await supertest(process.env.BASE_URL)
